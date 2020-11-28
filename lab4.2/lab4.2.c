@@ -12,7 +12,7 @@ typedef struct
 int main()
 {
 	int lenght_of_array = 0;
-	Number* array_of_numbers;
+	Number* array_of_numbers = NULL;
 
 	scanf("%d", &lenght_of_array);
 	array_of_numbers = malloc(sizeof(Number) * lenght_of_array);

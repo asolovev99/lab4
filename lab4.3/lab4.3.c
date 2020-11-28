@@ -22,8 +22,8 @@ int main()
 
 int* get_simples(int count)
 {
-	char* simple_numbers;
-	int* result;
+	char* simple_numbers = NULL;
+	int* result = NULL;
 	int number_of_simples = count - 2;
 	int i = 0;
 	int j = 0;
