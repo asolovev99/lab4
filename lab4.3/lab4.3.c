@@ -10,6 +10,7 @@ int main()
 	int count;
 	while (1)
 	{
+		printf("\nEnter number.\n");
 		scanf("%d", &count);
 		printf("\n");
 		free(get_simples(count));
@@ -79,6 +80,13 @@ int* get_simples(int count)
 			j++;
 		}
 	}
+
+	printf("Simple numbers:\n");
+	for (i = 0; i < number_of_simples; i++)
+	{
+		printf("%d ", result[i]);
+	}
+	printf("\n");
 
 	free(simple_numbers);
 
