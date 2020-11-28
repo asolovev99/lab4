@@ -3,19 +3,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct Number
+typedef struct
 {
 	int value;
 	int is_even;
-};
+} Number;
 
 int main()
 {
 	int lenght_of_array = 0;
-	struct Number* array_of_numbers;
+	Number* array_of_numbers;
 
 	scanf("%d", &lenght_of_array);
-	array_of_numbers = malloc(sizeof(struct Number) * lenght_of_array);
+	array_of_numbers = malloc(sizeof(Number) * lenght_of_array);
 
 	for (int i = 0; i < lenght_of_array; i++)
 	{
