@@ -3,8 +3,6 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-//#include"C:\Users\199930\source\repos\study\lab4\lab4.2\lab_1.2.c"
-
 int* get_simples(int count);
 
 int main()
@@ -30,12 +28,6 @@ int* get_simples(int count)
 
 	simple_numbers = malloc(sizeof(char) * (count - 2));
 
-	/*if (simple_numbers == NULL)
-	{
-		printf("\nsimple_numbers = NULL!!!");
-		exit(5);
-	}*/
-
 	for (i = 0; i < count - 2; i++)
 	{
 		simple_numbers[i] = 1;
@@ -44,7 +36,6 @@ int* get_simples(int count)
 	i = 2;
 	for (j = i * i; j <= count - 1; j += i)
 	{
-		//printf("%d: %d\n", j, simple_numbers[j - 2]);
 		if (simple_numbers[j - 2])
 		{
 			simple_numbers[j - 2] = 0;
@@ -57,7 +48,6 @@ int* get_simples(int count)
 	{
 		for (j = i * i; j <= count - 1; j += 2 * i)
 		{
-			//printf("%d: %d\n", j, simple_numbers[j - 2]);
 			if (simple_numbers[j - 2])
 			{
 				simple_numbers[j - 2] = 0;
@@ -69,8 +59,7 @@ int* get_simples(int count)
 		while ((simple_numbers[i - 2] == 0) && (i < count))
 		{
 			i++;
-		}
-		
+		}		
 	}
 
 	result = malloc(sizeof(int) * number_of_simples);
@@ -90,35 +79,6 @@ int* get_simples(int count)
 			j++;
 		}
 	}
-
-	/*printf("simple_numbers:\n");
-	for (i = 0; i < count - 2; i++)
-	{
-		printf("%d: %d\n", i + 2, simple_numbers[i]);
-	}
-	printf("\n");*/
-	/*printf("result:\n");
-	for (i = 0; i < number_of_simples; i++)
-	{
-		printf("%d: %d\n", i, result[i]);
-	}*/
-
-	/*int help_test = (count - 2) / 10;
-	for (i = 0; i < count - 2; i++)
-	{
-		if (i % help_test == 0) 
-		{
-			printf("\nWorking. Current number = %d.\n", i + 2);
-		}
-		if (simple_numbers[i] == is_simple(i + 2))
-		{
-			//printf("%d is fine.\n", i + 2);			
-		}
-		else
-		{
-			printf("%d is wrong!!!\n", i + 2);
-		}
-	}*/
 
 	free(simple_numbers);
 
